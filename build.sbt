@@ -13,23 +13,18 @@ lazy val commonSettings = Seq(
     crossPaths := false
 )
 
-val subProjects: Seq[ProjectReference] = Seq()
-
 lazy val `root` = (project in file(".")).settings(commonSettings: _*).settings(
     name := "CS1301"
-).aggregate(subProjects: _*)
+).aggregate(common)
 
-lazy val `common` = configureProject(project in file("common"))
+lazy val `common` = (project in file("common")).settings(commonSettings: _*)
 
-lazy val `helloWorld` = configureProject(project in file("helloWorld"))
+lazy val `helloWorld` = createProject("helloWorld")
 
-def configureProject(project: Project, projSettings: Seq[Def.Setting[_]] = Seq()): Project = {
-    project.settings(commonSettings: _*).settings(
-        organization := baseOrganization + "." + project.id,
-        scalaVersion := "2.11.8"
-    ).settings(projSettings: _*)
-    if(project.id != "common")
-        project.dependsOn(common)
-    root.aggregate(project: ProjectReference)
-    project
+def createProject(name: String): Project = {
+    val projectObject = Project(id = name, base = file(name)).settings(commonSettings: _*).settings(
+        organization := s"$baseOrganization.$name"
+    ).dependsOn(common)
+    root.aggregate(projectObject)
+    projectObject
 }
