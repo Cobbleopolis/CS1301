@@ -19,11 +19,15 @@ lazy val `root` = (project in file(".")).settings(commonSettings: _*).settings(
 
 lazy val `common` = (project in file("common")).settings(commonSettings: _*)
 
-lazy val `helloWorld` = createProject("helloWorld")
+lazy val `helloWorld` = createProject("helloWorld", "HelloWorld")
 
-def createProject(name: String): Project = {
+def createProject(name: String, mainClassName: String = "Main", enableScala: Boolean = false): Project = {
+    val org: String = s"$baseOrganization.$name"
     val projectObject = Project(id = name, base = file(name)).settings(commonSettings: _*).settings(
-        organization := s"$baseOrganization.$name"
+        organization := org,
+        mainClass in (Compile, run) := Some(s"$org.$mainClassName"),
+        mainClass in (Compile, packageBin) := Some(s"$org.$mainClassName"),
+        autoScalaLibrary := enableScala
     ).dependsOn(common)
     root.aggregate(projectObject)
     projectObject
