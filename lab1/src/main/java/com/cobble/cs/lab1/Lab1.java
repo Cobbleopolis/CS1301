@@ -85,6 +85,10 @@ public class Lab1 {
                 "\tThere is a runtime error thrown on line 3.\n" +
                 "\t\tThe error is thrown only when line 3 is run by the JVM because it is impossible to divide by zero.\n" +
                 "\t\tThe compiler wouldn't catch this because this is technically not a syntax error even tough the numbers are hardcoded.");
-        //TODO Listing 1.6
+        //Prints the info about the errors in Listing 1.6
+        System.out.println("Listing 1.6:\n" +
+                "\tThe logic error is on line 4.\n" +
+                "\t\tThis error exists because the phrase `(9 / 5)` does integer math rather than double or float math that is needed to properly do the conversion.\n" +
+                "\t\t`(9 / 5)` is 1 where 9 needs to be 9.0 and/or 5 needs to be 5.0 to get the needed 1.8 to correctly do the conversion.");
     }
 }
