@@ -1,3 +1,9 @@
+//Class:      CS1301
+//Term:       2016
+//Name:       Logan Thompson
+//Instructor: Monisha Verma
+//Assignment: Lab 1
+
 package com.cobble.cs.lab1;
 
 public class Lab1 {
@@ -6,7 +12,6 @@ public class Lab1 {
     private static final String separator = "--------";
 
     public static void main(String[] args) {
-        printInfo();
         System.out.println("Lab 1 | Exercise 1");
         exercise1();
         System.out.println(separator);
@@ -25,14 +30,6 @@ public class Lab1 {
         System.out.println("Lab 1 | Exercise 6");
         exercise6();
         System.out.println(separator);
-    }
-
-    private static void printInfo() {
-        System.out.println("Class:      CS1301");
-        System.out.println("Term:       2016");
-        System.out.println("Name:       Logan Thompson");
-        System.out.println("Instructor: Monisha Verma");
-        System.out.println("Assignment: Lab 1");
     }
 
     private static void exercise1() {
