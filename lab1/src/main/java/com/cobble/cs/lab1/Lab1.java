@@ -60,6 +60,8 @@ public class Lab1 {
         int width = 3;
         /** Variable to hold the height of a rectangle */
         int height = 5;
+        System.out.println("Width of the rectangle is " + width);
+        System.out.println("Height of the rectangle is " + height);
         System.out.println("Area of a " + width + "x" + height+ ": " + (width * height)); //Prints and calculates the area of a rectangle using the `width` and `height` variables
         System.out.println("Parameter of a " + width + "x" + height+ ": " + ((width * 2) + (height * 2))); //Prints and calculates the parameter of a rectangle using the `width` and `height` variables
     }
