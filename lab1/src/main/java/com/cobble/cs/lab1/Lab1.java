@@ -66,9 +66,9 @@ public class Lab1 {
 
     private static void exercise5() {
         /** Variable to hold the default speed in mi/min */
-        float speed = 75f / 50f; // Miles per min
-        speed *= 60f; //Miles per hour
-        speed *= 1.6f; //Km per hour
+        double speed = 75.0 / 50.0; // Miles per min
+        speed *= 60.0; //Miles per hour
+        speed *= 1.6; //Km per hour
         System.out.println("Average speed in Km/h: " + speed);
     }
 
