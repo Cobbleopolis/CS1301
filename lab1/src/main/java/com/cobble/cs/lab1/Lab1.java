@@ -2,9 +2,11 @@ package com.cobble.cs.lab1;
 
 public class Lab1 {
 
+    /** Just a variable used to notate a separation between exercises */
     private static final String separator = "--------";
 
     public static void main(String[] args) {
+        printInfo();
         System.out.println("Lab 1 | Exercise 1");
         exercise1();
         System.out.println(separator);
@@ -23,6 +25,14 @@ public class Lab1 {
         System.out.println("Lab 1 | Exercise 6");
         exercise6();
         System.out.println(separator);
+    }
+
+    private static void printInfo() {
+        System.out.println("Class:      CS1301");
+        System.out.println("Term:       2016");
+        System.out.println("Name:       Logan Thompson");
+        System.out.println("Instructor: Monisha Verma");
+        System.out.println("Assignment: Lab 1");
     }
 
     private static void exercise1() {
@@ -46,13 +56,16 @@ public class Lab1 {
     }
 
     private static void exercise4() {
-        int width = 3; //Variable to hold the width of a rectangle
-        int height = 5; //Variable to hold the height of a rectangle
+        /** Variable to hold the width of a rectangle */
+        int width = 3;
+        /** Variable to hold the height of a rectangle */
+        int height = 5;
         System.out.println("Area of a " + width + "x" + height+ ": " + (width * height)); //Prints and calculates the area of a rectangle using the `width` and `height` variables
         System.out.println("Parameter of a " + width + "x" + height+ ": " + ((width * 2) + (height * 2))); //Prints and calculates the parameter of a rectangle using the `width` and `height` variables
     }
 
     private static void exercise5() {
+        /** Variable to hold the default speed in mi/min */
         float speed = 75f / 50f; // Miles per min
         speed *= 60f; //Miles per hour
         speed *= 1.6f; //Km per hour
