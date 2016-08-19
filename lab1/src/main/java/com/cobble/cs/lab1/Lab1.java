@@ -67,7 +67,11 @@ public class Lab1 {
                 "\t\tSecond, there is no closing quote for the string that is passed to `System.out.println`.\n" +
                 "\t\tAs a side effect of the second syntax error the compiler says that there is no ending semi-colon on line 3.\n" +
                 "\t\tThe compiler also says that there is an unexpected end of file because the compiler is still looking for closing curly braces for the blocks associated with the main method and the class because the string on line 3 is never closed.");
-        //TODO Listing 1.5
+        //Prints the info about the errors in Listing 1.5
+        System.out.println("Listing 1.5:\n" +
+                "\tThere is a runtime error thrown on line 3.\n" +
+                "\t\tThe error is thrown only when line 3 is run by the JVM because it is impossible to divide by zero.\n" +
+                "\t\tThe compiler wouldn't catch this because this is technically not a syntax error even tough the numbers are hardcoded.");
         //TODO Listing 1.6
     }
 }
