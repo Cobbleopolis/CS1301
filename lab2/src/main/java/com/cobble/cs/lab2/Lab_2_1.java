@@ -2,7 +2,7 @@
 //Term:       2016
 //Name:       Logan Thompson
 //Instructor: Monisha Verma
-//Assignment: Lab 2_1
+//Assignment: Lab_2_1
 
 package com.cobble.cs.lab2;
 
