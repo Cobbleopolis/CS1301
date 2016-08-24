@@ -13,11 +13,9 @@ public class Lab_2_4 {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("Input the width of the box (integer): "); //Prompts for the width of the box
-        int width = scanner.nextInt();
-        System.out.print("Input the height of the box (integer): "); //Prompts for the height of the box
-        int height = scanner.nextInt();
-        System.out.println("The area of the box is " + (width * height)); //Calculates and prints the area of the box
-        System.out.println("The parameter of the box is " + (width * 2 + height * 2)); //Calculates and prints the parameter of the box
+        System.out.print("Input the side length of the square (integer): "); //Prompts for the side length of the square
+        int sideLength = scanner.nextInt();
+        System.out.println("The area of the box is " + (sideLength * sideLength)); //Calculates and prints the area of the square
+        System.out.println("The parameter of the box is " + (sideLength * 4)); //Calculates and prints the parameter of the square
     }
 }
