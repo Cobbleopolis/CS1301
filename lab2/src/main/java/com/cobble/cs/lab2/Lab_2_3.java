@@ -31,6 +31,11 @@ public class Lab_2_3 {
         System.out.print("Input double value: "); //Gets the double value
         double double_value = scanner.nextDouble(); //Waits for a double value
 
-        //TODO printing values
+        System.out.println("Byte Value: " + byte_value); //Prints the byte value that was inputted
+        System.out.println("Short Value: " + short_value); //Prints the short value that was inputted
+        System.out.println("Int Value: " + int_value); //Prints the int value that was inputted
+        System.out.println("Long Value: " + long_value); //Prints the long value that was inputted
+        System.out.println("Float Value: " + float_value); //Prints the float value that was inputted
+        System.out.println("Double Value: " + double_value); //Prints the double value that was inputted
     }
 }
