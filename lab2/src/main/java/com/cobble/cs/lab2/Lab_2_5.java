@@ -31,9 +31,15 @@ public class Lab_2_5 {
         int nickelCount = promptCoinCount("nickels");
         int pennyCount = promptCoinCount("pennies");
 
-        //TODO print all of the coin counts
+        System.out.println("--------"); //Just used for separating the input from the output
+        printCoinCount("quarters", quarterCount);
+        printCoinCount("dimes", dimeCount);
+        printCoinCount("nickel", nickelCount);
+        printCoinCount("pennies", pennyCount);
 
-        //TODO print the total
+        /** The total amount of money in dollars */
+        double total = quarterCount * QUARTER_VALUE + dimeCount * DIME_VALUE + nickelCount * NICKEL_VALUE + pennyCount * PENNY_VALUE;
+        System.out.println("Total: " + (int) Math.floor(total) + " Dollars and " + (int) ((total % 1) * 100) + " Cents"); //Prints and formats the the total
     }
 
     /**
@@ -41,8 +47,17 @@ public class Lab_2_5 {
      * @param coinName The name of the coin to ask for
      * @return The amount of the coin the user inputs
      */
-    public static int promptCoinCount(String coinName) {
-        System.out.print("# of " + coinName); //Prompt the user for an amount of couins
+    private static int promptCoinCount(String coinName) {
+        System.out.print("# of " + coinName + ": "); //Prompt the user for an amount of couins
         return scanner.nextInt();
+    }
+
+    /**
+     * Prints the count of a coin
+     * @param coinName The name of the coin
+     * @param coinCount The amount of coins
+     */
+    private static void printCoinCount(String coinName, int coinCount) {
+        System.out.println("# of " + coinName + ": " + coinCount);
     }
 }
