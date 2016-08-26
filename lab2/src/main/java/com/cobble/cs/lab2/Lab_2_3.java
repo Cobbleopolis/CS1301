@@ -17,16 +17,16 @@ public class Lab_2_3 {
         byte byte_value = scanner.nextByte(); //Waits for a byte value
 
         System.out.print("Input short value: "); //Gets the short value
-        short short_value = scanner.nextByte(); //Waits for a short value
+        short short_value = scanner.nextShort(); //Waits for a short value
 
         System.out.print("Input int value: "); //Gets the int value
         int int_value = scanner.nextInt(); //Waits for a int value
 
         System.out.print("Input long value: "); //Gets the long value
-        long long_value = scanner.nextInt(); //Waits for a long value
+        long long_value = scanner.nextLong(); //Waits for a long value
 
         System.out.print("Input float value: "); //Gets the float value
-        float float_value = scanner.nextInt(); //Waits for a float value
+        float float_value = scanner.nextFloat(); //Waits for a float value
 
         System.out.print("Input double value: "); //Gets the double value
         double double_value = scanner.nextDouble(); //Waits for a double value

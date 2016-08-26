@@ -26,7 +26,7 @@ public class Lab_2_2 {
      * @return The floating-point number that the user inputted
      */
     private static double getDouble(String name) {
-        System.out.print("Please type an integer(" + name + "): "); //Prompts the user to input an floating-point number
+        System.out.print("Please type an double (" + name + "): "); //Prompts the user to input an floating-point number
         return scanner.nextDouble(); // Waits until the user inputs an integer and returns it
     }
 

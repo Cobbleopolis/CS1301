@@ -20,6 +20,8 @@ public class Lab_2_1 {
         System.out.println("The value of X is: " + x); //Prints the value of x
         System.out.println("The value of Y is: " + y); //Prints the value of y
         System.out.println("The value of Z is: " + z); //Prints the value of z
+
+        System.out.println("Average of x, y, and z: " + ((x + y + z) / 3)); //Prints and calculates the average of x, y, and z
     }
 
     /**
@@ -28,7 +30,7 @@ public class Lab_2_1 {
      * @return The integer that the user inputted
      */
     private static int getInt(String name) {
-        System.out.print("Please type an integer(" + name + "): "); //Prompts the user to input an integer
+        System.out.print("Please type an integer (" + name + "): "); //Prompts the user to input an integer
         return scanner.nextInt(); // Waits until the user inputs an integer and returns it
     }
 
