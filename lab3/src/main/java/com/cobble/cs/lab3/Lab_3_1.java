@@ -19,16 +19,16 @@ public class Lab_3_1 {
         int[] grades = {scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt()};
 
         for(int i = 0; i < grades.length; i++)
-            System.out.println("Grade #" + i + ": " + grades[i]);
+            System.out.println("Grade #" + (i + 1) + ": " + grades[i]);
 
         /** Variable to store the maximum value from grades. */
         int max = grades[0];
 
         /** Variable to store the minimum value from grades. */
-        double min = grades[0];
+        int min = grades[0];
 
         /** Variable to store the average value from grades. */
-        int avg = 0;
+        double avg = 0;
 
         //Loops over the grade array and finds the maximum and minimum value. It also begins to calculate the average.
         for(int grade : grades) {
