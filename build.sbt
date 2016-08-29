@@ -27,6 +27,8 @@ lazy val `ao1` = createProject("ao1")
 
 lazy val `lab2` = createProject("lab2")
 
+lazy val `hw2` = createProject("hw2")
+
 def createProject(name: String, mainClassName: String = "Main", enableScala: Boolean = false): Project = {
     val org: String = s"$baseOrganization.$name"
     val projectObject = Project(id = name, base = file(name)).settings(commonSettings: _*).settings(
