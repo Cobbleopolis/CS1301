@@ -35,6 +35,7 @@ public class IncomeTax {
      * @param taxBracket The tax bracket that the income is in.
      */
     private static void printIncome(double income, int taxBracket) {
-        System.out.println("Your income is $" + String.format("%.2f", income) + " so your income tax is " + taxBracket + "%.");
+        double taxPaid = income * ((double) taxBracket / 100);
+        System.out.println("Your income is $" + String.format("%.2f", income) + "\n Your income tax is " + taxBracket + "% so you will pay $" + String.format("%.2f", taxPaid) + " in income tax.");
     }
 }
