@@ -27,7 +27,7 @@ lazy val `ao1` = createProject("ao1")
 
 lazy val `lab2` = createProject("lab2")
 
-lazy val `hw2` = createProject("hw2")
+lazy val `hw` = createProject("hw")
 
 lazy val `lab3` = createProject("lab3")
 
