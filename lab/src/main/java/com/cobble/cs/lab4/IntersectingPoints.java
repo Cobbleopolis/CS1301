@@ -40,7 +40,6 @@ public class IntersectingPoints {
         if (m1 == m2) {
             System.out.println("The two lines are parallel");
         } else {
-            //TODO get math to work.
             /** The x coordinate of the point. */
             double x = (b2 - b1) / (m1 - m2);
 
