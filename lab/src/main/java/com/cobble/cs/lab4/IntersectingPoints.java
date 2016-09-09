@@ -87,7 +87,7 @@ public class IntersectingPoints {
          * @return The slope between the two point.
          */
         double getSlope(Point other) {
-            return (x - other.x) / (y - other.y);
+            return (y - other.y) / (x - other.x);
         }
 
         /**
