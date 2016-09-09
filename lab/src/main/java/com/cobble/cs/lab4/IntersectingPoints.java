@@ -96,7 +96,7 @@ public class IntersectingPoints {
          * @return The y-intercept of the line.
          */
         double getYIntercept(double m) {
-            return (Math.signum(x) * (m * x)) + y;
+            return (-Math.signum(x) * (m * x)) + y;
         }
     }
 }
