@@ -21,15 +21,11 @@ lazy val `common` = (project in file("common")).settings(commonSettings: _*)
 
 lazy val `helloWorld` = createProject("helloWorld", "HelloWorld")
 
-lazy val `lab1` = createProject("lab1", "Lab1")
+lazy val `lab` = createProject("lab")
 
 lazy val `ao1` = createProject("ao1")
 
-lazy val `lab2` = createProject("lab2")
-
 lazy val `hw` = createProject("hw")
-
-lazy val `lab3` = createProject("lab3")
 
 def createProject(name: String, mainClassName: String = "Main", enableScala: Boolean = false): Project = {
     val org: String = s"$baseOrganization.$name"
