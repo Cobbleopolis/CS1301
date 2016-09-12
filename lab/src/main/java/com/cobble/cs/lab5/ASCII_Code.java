@@ -13,10 +13,10 @@ public class ASCII_Code {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("Enter an ASCII code: ");
+        System.out.print("Enter an ASCII code: "); // Prompts the user for an ASCII code
 
-        char c = scanner.next().charAt(0);
+        int c = scanner.nextInt(); // Gets the ASCII code from the user
 
-        System.out.println("The character for ASCII code " + (int) c + " is " + c);
+        System.out.println("The character for ASCII code " + c + " is " + (char) c); // Prints the ASCII code and converts it to a char
     }
 }
