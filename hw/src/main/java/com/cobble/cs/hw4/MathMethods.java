@@ -27,9 +27,9 @@ public class MathMethods {
         /** Stores the angle inputted by the user. */
         double angle = scanner.nextDouble();
 
-        System.out.printf("The sine of %f is %f\n", angle, Math.sin(Math.toRadians(angle))); // Prints the sine of `angle`.
-        System.out.printf("The cosine of %f is %f\n", angle, Math.cos(Math.toRadians(angle))); // Prints the cosine of `angle`.
-        System.out.printf("The tangent of %f is %f\n", angle, Math.tan(Math.toRadians(angle))); // Prints the tangent of `angle`.
+        System.out.printf("The sine of %f is %f\n", angle, Math.sin(angle)); // Prints the sine of `angle`.
+        System.out.printf("The cosine of %f is %f\n", angle, Math.cos(angle)); // Prints the cosine of `angle`.
+        System.out.printf("The tangent of %f is %f\n", angle, Math.tan(angle)); // Prints the tangent of `angle`.
 
         // Part C: Floor and Ceiling
         System.out.print("Enter a floating-point number: "); // Prompts the user for `floorCeil`.
