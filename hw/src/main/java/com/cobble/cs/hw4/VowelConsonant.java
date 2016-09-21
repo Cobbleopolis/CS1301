@@ -18,11 +18,11 @@ public class VowelConsonant {
         /** Stores the first character of the inputted string. */
         String str = scanner.next().substring(0, 1);
 
-        if (str.toLowerCase().matches("[aeiou]"))
+        if (str.toLowerCase().matches("[aeiou]")) // Checks if `str.toLowerCase()` is any vowel
             System.out.println(str + " is a vowel");
-        else if(str.toLowerCase().matches("[a-z&&[^aeiou]]"))
+        else if(str.toLowerCase().matches("[a-z&&[^aeiou]]")) // Checks if `str.toLowerCase()` is not a vowel and it's a letter
             System.out.println(str + " is a consonant");
-        else
+        else // Will be called if `str.toLowerCase()` is not a-z
             System.out.println(str + " is an invalid input");
     }
 }
