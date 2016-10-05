@@ -13,17 +13,26 @@ public class MinMaxAvg {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        /** Stores the first number. */
-        int num1 = getNum(1);
-        /** Stores the second number. */
-        int num2 = getNum(2);
-        /** Stores the third number. */
-        int num3 = getNum(3);
 
-        System.out.printf("You entered: %d %d %d%n", num1, num2, num3); // Prints the inputted values.
-        System.out.printf("Max value: %d%n", max(max(num1, num2), num3)); // Prints the max of the inputted values.
-        System.out.printf("Min value: %d%n", min(min(num1, num2), num3)); // Prints the min of the inputted values.
-        System.out.printf("Average value: %f%n", average(num1, num2, num3)); // Prints the average of the inputted values.
+        /** Stores if the user wants to re-run the program. */
+        boolean reRun;
+
+        do {
+            /** Stores the first number. */
+            int num1 = getNum(1);
+            /** Stores the second number. */
+            int num2 = getNum(2);
+            /** Stores the third number. */
+            int num3 = getNum(3);
+
+            System.out.printf("You entered: %d %d %d%n", num1, num2, num3); // Prints the inputted values.
+            System.out.printf("Max value: %d%n", max(max(num1, num2), num3)); // Prints the max of the inputted values.
+            System.out.printf("Min value: %d%n", min(min(num1, num2), num3)); // Prints the min of the inputted values.
+            System.out.printf("Average value: %f%n", average(num1, num2, num3)); // Prints the average of the inputted values.
+
+            System.out.print("Do you want to re-run the program? [y/n]: "); // Prompts the user to re-run the program
+            reRun = scanner.next().toLowerCase().charAt(0) == 'y'; // Checks the user input to re-run the program
+        } while (reRun);
     }
 
     /**
@@ -61,6 +70,7 @@ public class MinMaxAvg {
 
     /**
      * Calculates the average of three numbers.
+     *
      * @param x The first value to take the average of.
      * @param y The second value to take the average of.
      * @param z The third value to take the average of.
