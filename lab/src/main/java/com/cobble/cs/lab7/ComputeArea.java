@@ -13,31 +13,39 @@ public class ComputeArea {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        // Square
-        System.out.print("Square Side: "); // Prompts the user for square side.
-        System.out.println("Square Area: " + squareArea(scanner.nextDouble())); // Prints the area of the square.
+        /** Stores if the user wants to re-run the program. */
+        boolean reRun;
 
-        // Rectangle
-        System.out.print("Rectangle Width: "); // Prompts the user for rectangle width.
+        do {
+            // Square
+            System.out.print("Square Side: "); // Prompts the user for square side.
+            System.out.println("Square Area: " + squareArea(scanner.nextDouble())); // Prints the area of the square.
 
-        /** Stores the width of the rectangle. */
-        double rectWidth = scanner.nextDouble();
+            // Rectangle
+            System.out.print("Rectangle Width: "); // Prompts the user for rectangle width.
 
-        System.out.print("Rectangle Height: "); // Prompts the user for rectangle height.
-        System.out.println("Rectangle Area: " + rectangleArea(rectWidth, scanner.nextDouble())); // Prints the are of the rectangle.
+            /** Stores the width of the rectangle. */
+            double rectWidth = scanner.nextDouble();
 
-        //Circle
-        System.out.print("Circle Radius: "); // Prompts the user for circle radius.
-        System.out.println("Circle Area: " + circleArea(scanner.nextDouble())); // Prints the area of the circle.
+            System.out.print("Rectangle Height: "); // Prompts the user for rectangle height.
+            System.out.println("Rectangle Area: " + rectangleArea(rectWidth, scanner.nextDouble())); // Prints the are of the rectangle.
 
-        //Triangle
-        System.out.print("Triangle Base: "); // Prompts the user for triangle base.
+            //Circle
+            System.out.print("Circle Radius: "); // Prompts the user for circle radius.
+            System.out.println("Circle Area: " + circleArea(scanner.nextDouble())); // Prints the area of the circle.
 
-        /** Stores the base of the triangle. */
-        double triangleBase = scanner.nextDouble();
+            //Triangle
+            System.out.print("Triangle Base: "); // Prompts the user for triangle base.
 
-        System.out.print("Triangle Height: "); // Prompts the user for triangle height.
-        System.out.println("Triangle Area: " + triangleArea(triangleBase, scanner.nextDouble())); // Prints the area of the triangle.
+            /** Stores the base of the triangle. */
+            double triangleBase = scanner.nextDouble();
+
+            System.out.print("Triangle Height: "); // Prompts the user for triangle height.
+            System.out.println("Triangle Area: " + triangleArea(triangleBase, scanner.nextDouble())); // Prints the area of the triangle.
+
+            System.out.print("Do you want to re-run the program? [y/n]: "); // Prompts the user to re-run the program
+            reRun = scanner.next().toLowerCase().charAt(0) == 'y'; // Checks the user input to re-run the program
+        } while (reRun);
     }
 
     /**
