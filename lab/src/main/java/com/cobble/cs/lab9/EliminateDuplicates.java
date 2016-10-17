@@ -14,14 +14,20 @@ public class EliminateDuplicates {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("Enter ten integers: ");
-        /** Stores the numbers inputted by the user. */
-        int[] nums = {scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt()};
+        /** Stores if the user wants to re-run the program. */
+        boolean reRun;
 
-        System.out.print("The unique numbers are: ");
-        for (int i : eliminateDuplicates(nums)) // Loops over every int in what is returned by `eliminateDuplicates` and prints it.
-            System.out.print(i + " ");
+        do {
+            System.out.print("Enter ten integers: ");
+            /** Stores the numbers inputted by the user. */
+            int[] nums = {scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt()};
 
+            System.out.print("The unique numbers are: ");
+            for (int i : eliminateDuplicates(nums)) // Loops over every int in what is returned by `eliminateDuplicates` and prints it.
+                System.out.print(i + " ");
+            System.out.print("Do you want to re-run the program? [y/n]: "); // Prompts the user to re-run the program
+            reRun = scanner.next().toLowerCase().charAt(0) == 'y'; // Checks the user input to re-run the program
+        } while (reRun);
     }
 
     /**
