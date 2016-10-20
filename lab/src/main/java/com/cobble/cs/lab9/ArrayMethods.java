@@ -48,8 +48,7 @@ public class ArrayMethods {
     private static int arrayMax(int[] arr) {
         int max = arr[0];
         for (int i : arr)
-            if (i > max)
-                max = i;
+            max = Math.max(max, i);
         return max;
     }
 
@@ -61,8 +60,7 @@ public class ArrayMethods {
     private static int arrayMin(int[] arr) {
         int min = arr[0];
         for (int i : arr)
-            if (i < min)
-                min = i;
+            min = Math.min(min, i);
         return min;
     }
 
