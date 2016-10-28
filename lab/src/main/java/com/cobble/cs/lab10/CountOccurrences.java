@@ -18,6 +18,7 @@ public class CountOccurrences {
 
         do {
 
+            System.out.print("Enter a list of numbers, end list w/ 0: ");
             /** Stores the input from the user for each number as it's read. */
             int input = scanner.nextInt();
 
@@ -25,13 +26,13 @@ public class CountOccurrences {
             int[] counts = new int[input + 1];
 
             /** Stores the maximum number inputted by the user. */
-            int maxInput = Integer.MIN_VALUE;
+            int maxInput = input;
 
             // Reads each input from the user while input is not 0.
             while(input != 0) {
                 maxInput = Math.max(input, maxInput); // Recalculates max input.
                 if (counts.length != maxInput + 1) // Checks if counts needs to be resized
-                    counts = Arrays.copyOf(counts, Math.max(maxInput + 1, 0)); // Resizes the counts array
+                    counts = Arrays.copyOf(counts, maxInput + 1); // Resizes the counts array
                 counts[input]++; // Increments the counts array
                 input = scanner.nextInt(); // gets the next input from the user.
             }
