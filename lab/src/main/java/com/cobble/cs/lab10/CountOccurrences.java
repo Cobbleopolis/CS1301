@@ -17,36 +17,24 @@ public class CountOccurrences {
         boolean reRun;
 
         do {
-            /**
-             * Stores the values inputted by the user.
-             */
-            int[] nums = new int[0];
 
-            /**
-             * Stores the input from the user for each number as it's read.
-             */
+            /** Stores the input from the user for each number as it's read. */
             int input = scanner.nextInt();
 
-            /**
-             * Stores the maximum number inputted by the user.
-             */
+            /** Stores the count values. */
+            int[] counts = new int[input + 1];
+
+            /** Stores the maximum number inputted by the user. */
             int maxInput = Integer.MIN_VALUE;
 
-            // Reads each input from the user and while the input is not 0 it will add it to the nums array, and then recalculate maxInput.
+            // Reads each input from the user while input is not 0.
             while(input != 0) {
-                nums = Arrays.copyOf(nums, nums.length + 1);
-                nums[nums.length - 1] = input;
-                maxInput = Math.max(input, maxInput);
-                input = scanner.nextInt();
+                maxInput = Math.max(input, maxInput); // Recalculates max input.
+                if (counts.length != maxInput + 1) // Checks if counts needs to be resized
+                    counts = Arrays.copyOf(counts, Math.max(maxInput + 1, 0)); // Resizes the counts array
+                counts[input]++; // Increments the counts array
+                input = scanner.nextInt(); // gets the next input from the user.
             }
-
-            /**
-             * Stores the count values.
-             */
-            int[] counts = new int[maxInput + 1];
-
-            for(int num: nums) //Loops over the inputted values and passes them to addCount
-                counts[num]++;
 
             for(int i = 0; i < counts.length; i++) //Loops over the counts and prints them to the console if they're not 0.
                 if (counts[i] > 0)
