@@ -22,6 +22,7 @@ public class LocateLargestElement {
             /** Stores the matrix inputted by the user. */
             double[][] mat = new double[scanner.nextInt()][scanner.nextInt()];
 
+            System.out.println("Enter the array:");
             // Populates mat w/ values from the user.
             for (int i = 0; i < mat.length; i++)
                 for (int j = 0; j < mat[i].length; j++)

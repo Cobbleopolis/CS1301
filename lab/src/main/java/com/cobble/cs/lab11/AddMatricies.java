@@ -31,6 +31,7 @@ public class AddMatricies {
             /** Stores the sum of mat1 and mat2 */
             double[][] add = addMatrix(mat1, mat2);
 
+            System.out.println("The matrices added as follows");
             for (int i = 0; i < 3; i++)
                 System.out.printf("%s  %s  %s  %s  %s%n",
                         getArrayRowString(mat1[i]), //Prints the row of mat1
