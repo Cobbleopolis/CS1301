@@ -32,7 +32,7 @@ public class TestCircleWithPrivateDataFields {
                 + CircleWithPrivateDataFields.getNumberOfObjects());
 
         // Modifies yourCircle
-        yourCircle.setRadius(yourCircle.getArea() * 1.5);
+        yourCircle.setRadius(yourCircle.getRadius() * 1.5);
 
         // Prints the circle info from yourCircle after it's modified
         System.out.println("The area of the circle of radius "
