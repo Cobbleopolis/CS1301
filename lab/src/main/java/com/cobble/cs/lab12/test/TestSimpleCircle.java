@@ -4,7 +4,7 @@
 //Instructor: Monisha Verma
 //Assignment: TestSimpleCircle
 
-package com.cobble.cs.lab12;
+package com.cobble.cs.lab12.test;
 
 public class TestSimpleCircle {
   /** Main method */
