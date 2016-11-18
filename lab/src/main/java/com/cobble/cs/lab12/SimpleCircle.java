@@ -23,10 +23,10 @@ public class SimpleCircle {
         System.out.printf(PRINT_FORMAT, circle2.radius, circle2.getArea());
 
         SimpleCircle circle4 = new SimpleCircle(200);
-        System.out.printf(PRINT_FORMAT, circle3.radius, circle3.getArea());
+        System.out.printf(PRINT_FORMAT, circle4.radius, circle4.getArea());
 
         SimpleCircle circle5 = new SimpleCircle(250);
-        System.out.printf(PRINT_FORMAT, circle3.radius, circle3.getArea());
+        System.out.printf(PRINT_FORMAT, circle5.radius, circle5.getArea());
     }
 
     public double radius;
